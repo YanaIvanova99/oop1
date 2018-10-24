@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar prefHeight="13.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Создать">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openSubject" text="Курс" />
+                  <MenuItem mnemonicParsing="false" text="Преподаватель" />
+                  <MenuItem mnemonicParsing="false" text="Студент" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Просмотр">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showInfo" text="Просмотр" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane fx:id="subjectPane" layoutY="29.0" prefHeight="372.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="224.0" layoutY="32.0" prefHeight="42.0" prefWidth="119.0" text="Создание курса" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="156.0" layoutY="105.0" text="Название предмета" />
+            <Label layoutX="156.0" layoutY="186.0" text="Количество часов" />
+            <TextField fx:id="subjectName" layoutX="317.0" layoutY="100.0" />
+            <TextField fx:id="subjectHours" layoutX="317.0" layoutY="181.0" />
+            <Button layoutX="254.0" layoutY="281.0" mnemonicParsing="false" onAction="#createSubject" text="Создать" />
+         </children>
+      </Pane>
+      <Label fx:id="cnsl" layoutX="250.0" layoutY="378.0" prefHeight="17.0" prefWidth="101.0" />
+      <Pane fx:id="showPane" layoutX="6.0" layoutY="29.0" prefHeight="372.0" prefWidth="600.0" visible="false">
+         <children>
+            <TextArea fx:id="showAll" layoutY="13.0" prefHeight="347.0" prefWidth="591.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
